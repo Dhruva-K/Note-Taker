@@ -82,9 +82,7 @@ class Sidebar extends Component {
         this.setState({ title: null, addingNote: false});
     }
     selectNote = (n , i)=>{
-        //  this.props.selectNote(n,i);
-        // console.log('note selected');
-       
+        this.props.selectNote(n,i);
     }
 
     deleteNote = (note) => this.props.deleteNote(note);
