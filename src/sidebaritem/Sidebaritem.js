@@ -18,7 +18,7 @@ import { removeHTMLTags } from '../helpers';
                 alignItems='flex-start'
                 >
                 <div className={classes.textSection}
-                onClick = {()=> this.selectNote(_note,_index)}
+                onClick = {()=> console.log("button clicked")}
                 >
                 <ListItemText primary={_note.title}
                 secondary = {removeHTMLTags(_note.body.substring(0,30)) + '...'}>
@@ -37,7 +37,8 @@ import { removeHTMLTags } from '../helpers';
     deleteNote = (note) =>{
         if(window.confirm(`Are you sure you want to delete: ${note.title}`))
         {
-            this.props.deleteNote(note);
+            // this.props.deleteNote(note);
+            console.log('note selected');
         }
     }
 }

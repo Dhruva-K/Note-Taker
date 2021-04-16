@@ -11,20 +11,23 @@ const styles = theme => ({
       borderRadius: '0px'
     },
     unreadMessage: {
-      color: 'red',
+      color: 'grey',
       position: 'absolute',
       top: '0',
       right: '5px'
     },
     newNoteBtn: {
-      width: '100%',
+      marginTop: "120%",
+      width: '91%',
       height: '35px',
+    
+      margin: '10px',
       borderBottom: '1px solid black',
-      borderRadius: '0px',
-      backgroundColor: '#29487d',
+      borderRadius: '25px',
+      backgroundColor: '#242424',
       color: 'white',
       '&:hover': {
-        backgroundColor: '#88a2ce'
+        backgroundColor: 'grey'
       }
     },
     sidebarContainer: {
@@ -32,6 +35,7 @@ const styles = theme => ({
       width: '300px',
       height: '100%',
       boxSizing: 'border-box',
+      
       float: 'left',
       overflowY: 'scroll',
       overflowX: 'hidden'
@@ -43,16 +47,19 @@ const styles = theme => ({
       outline: 'none',
       border: 'none',
       paddingLeft: '5px',
-      '&:focus': {
-        outline: '2px solid rgba(81, 203, 238, 1)'
-      }
+      // '&:focus': {
+      //   outline: '2px solid rgba(81, 203, 238, 1)'
+      // }
     },
     newNoteSubmitBtn: {
-      width: '100%',
-      backgroundColor: '#28787c',
-      borderRadius: '0px',
+      height:'30px',
+      marginLeft: '60px',
+      width: '50%',
+      backgroundColor: '#242424',
+      borderRadius: '25px',
       color: 'white'
     }
+    
   });
   
   export default styles;

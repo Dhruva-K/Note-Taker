@@ -3,16 +3,19 @@ import { Button } from './Button'
 import './Hero.css';
 import '../App.css';
 import Video2 from "./videos/video-2.mp4"
+import image from "../images/home.svg"
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
+import Notes from './pages/Notes';
 
 function Hero() {
     return (
         <div className='hero-container'>
-            <video autoPlay loop muted>
-            <source src={Video2} type="video/mp4"/>  
-            </video>
+            <img src = {image} className="img-fluid-animated"/>
+            <div className="text">
             <h1>Note Taking App</h1>
             <p>That one place to store your notes</p>
             <div className = "hero-btns">
+            
                 <Button 
                 className='btns' 
                 buttonStyle = 'btn--outline'
@@ -20,13 +23,15 @@ function Hero() {
                 >
                     GET STARTED
                 </Button>
-                <Button 
+           
+                {/* <Button 
                 className='btns' 
                 buttonStyle = 'btn--primary'
                 buttonSize = 'btn--large'
                 >
                     WATCH TRAILER <i className='far fa-play-circle'/>
-                </Button>
+                </Button> */}
+                </div>
 
             </div>
             

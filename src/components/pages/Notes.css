@@ -14,10 +14,12 @@
   .ql-container {
     box-sizing: border-box;
     height: calc(100% - 42px);
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
   .ql-editor {
     cursor: text;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   .MuiListItem-root.Mui-selected {
     background-color: #d4d8e8 !important;

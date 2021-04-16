@@ -21,11 +21,7 @@ class Sidebar extends Component {
        if(notes)
        { return (
             <div className={classes.sidebarContainer}>
-            <Button
-               onClick = {this.newNoteClick}
-               className={classes.newNoteBtn}>{this.state.addingNote ? 'Cancel' : 'New Note'}
-                   
-               </Button>
+            
                {
                    this.state.addingNote ?
                    <div>
@@ -52,6 +48,7 @@ class Sidebar extends Component {
                                 _index={_index}
                                 selectedNoteIndex = {selectedNoteIndex}
                                 selectNote = {this.selectNote}
+                                deleteNote = {this.deleteNote}
                                 >
 
                                 </Sidebaritem>
@@ -62,6 +59,11 @@ class Sidebar extends Component {
                        })
                    }
                </List>
+               <Button
+               onClick = {this.newNoteClick}
+               className={classes.newNoteBtn}>{this.state.addingNote ? 'Cancel' : 'New Note'}
+                   
+               </Button>
                 
             </div>
         )}
@@ -80,7 +82,9 @@ class Sidebar extends Component {
         this.setState({ title: null, addingNote: false});
     }
     selectNote = (n , i)=>{
-        this.props.selectNote(n,i);
+        //  this.props.selectNote(n,i);
+        // console.log('note selected');
+       
     }
 
     deleteNote = (note) => this.props.deleteNote(note);
