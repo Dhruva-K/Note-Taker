@@ -15,7 +15,7 @@ class Sidebar extends Component {
              title: null
         }
     }
-    
+     
     render() {
         const { notes, classes , selectedNoteIndex} = this.props;
        if(notes)
@@ -38,6 +38,7 @@ class Sidebar extends Component {
                    null
 
                }
+               <div className = {classes.list}>
                <List>
                    {
                        notes.map((_note, _index)=>{
@@ -49,6 +50,7 @@ class Sidebar extends Component {
                                 selectedNoteIndex = {selectedNoteIndex}
                                 selectNote = {this.selectNote}
                                 deleteNote = {this.deleteNote}
+                                fileUpload = {this.fileUpload}
                                 >
 
                                 </Sidebaritem>
@@ -59,13 +61,20 @@ class Sidebar extends Component {
                        })
                    }
                </List>
-               <Button
+               </div>
+               
+               <div>
+            <Button
                onClick = {this.newNoteClick}
                className={classes.newNoteBtn}>{this.state.addingNote ? 'Cancel' : 'New Note'}
                    
                </Button>
+               </div>
+           
                 
             </div>
+            
+            
         )}
         else{
             return(<div>Add a note!</div>)
@@ -86,6 +95,8 @@ class Sidebar extends Component {
     }
 
     deleteNote = (note) => this.props.deleteNote(note);
+
+    fileUpload = (note) => this.props.fileUpload(note);
 }
 
 export default withStyles(styles)(Sidebar);

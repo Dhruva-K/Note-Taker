@@ -2,24 +2,29 @@
   .app-container {
     height: 100vh;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
     
+   
   }
   .quill {
     height: 100%;
     box-sizing: border-box;
-    width: calc(100% - 300px);
+    width: 80vw;
     float: left;
     
   }
   .ql-container {
     box-sizing: border-box;
     height: calc(100% - 42px);
-    overflow-y: hidden;
+    
+    
   }
   .ql-editor {
     cursor: text;
     padding-left: 100px;
     padding-right: 100px;
+    
   }
   .MuiListItem-root.Mui-selected {
     background-color: #d4d8e8 !important;

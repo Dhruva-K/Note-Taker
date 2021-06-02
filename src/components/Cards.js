@@ -1,21 +1,39 @@
 import React from 'react';
+import Voice from '../editor/Voice';
 import Carditem from './Carditem';
 import './Cards.css';
+import not from "../images/Add notes-amico.svg";
+import voice_ from "../images/Voice control-pana.svg";
+import sum_ from "../images/Notes-pana.svg";
 
 function Cards() {
     return (
         <div className='cards'>
-            <h1>Check out destinations</h1>
+            <h1>Taking Notes the right way!</h1>
             <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className="cards__items">
-                        <Carditem
-                        src="../src/images/img-9.jpg"
-                        text="Explore waterfalls in amazon"
-                        label='Adventure'
-                        path='/services'
-                        />
-                    </ul>
+                <div className='sec_1'>
+                <div className = "img_contain">
+                    <img src = {sum_} className="images"/>
+                    </div>
+                    <Carditem text = "Hello"
+                    path = "/editor"
+                   />
+                </div>
+                <div className='sec_2'>
+                <div className = "img_contain">
+                    <img src = {voice_} className="images"/>
+                    </div>
+                    <Carditem text = "Hello"
+                    path = "/editor"
+                   />
+                </div>
+                <div className='sec_3'>
+                    <div className = "img_contain">
+                    <img src = {not} className="images"/>
+                    </div>
+                    <Carditem text = "Hello"
+                    path = "/editor"
+                   />
                 </div>
             </div>
             

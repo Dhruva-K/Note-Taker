@@ -12,6 +12,15 @@ const styles = theme => ({
       '&:hover': {
         color: 'red'
       }
+    },
+    editIcon: {
+      color: '#3954EE',
+      position: 'absolute',
+      right: '40px',
+      top: 'calc(50% - 15px)',
+      '&:hover': {
+        color: 'red'
+      }
     }
   });
   

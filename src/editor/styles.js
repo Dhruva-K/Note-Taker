@@ -3,21 +3,38 @@ const styles = theme => ({
       backgroundColor: theme.palette.background.paper,
       height: 'calc(100% - 35px)',
       position: 'absolute',
-      left: '0',
-      width: '300px',
+      left: '30%',
+      width: '100vw',
       boxShadow: '0px 0px 2px black',
+      
       
     },
     titleInput: {
+      
+      border:'none',
+      fontSize: '24px',
+      width: '80%',
+      backgroundColor:'#3954EE ',
+      color: 'white',
+      boxSizing: 'border-box',
+      
+      
+    },
+    Title:{
+      left: '400px',
+      paddingLeft: '50px',
       height: '50px',
+      backgroundColor: '#3954EE ',
+      width: '100%',
       boxSizing: 'border-box',
       border: 'none',
       padding: '5px',
-      fontSize: '24px',
-      width: 'calc(100% - 300px)',
-      backgroundColor: '#29487d',
-      color: 'white',
-      paddingLeft: '50px'
+      
+    },
+
+    but: {
+      width: '50px',
+      height: '20px'
     },
     editIcon: {
       position: 'absolute',
@@ -31,8 +48,10 @@ const styles = theme => ({
      
       height: '100%',
       boxSizing: 'border-box',
+      
    
-    }
+    },
+   
   });
   
   export default styles;

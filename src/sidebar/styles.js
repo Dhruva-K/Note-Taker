@@ -17,7 +17,7 @@ const styles = theme => ({
       right: '5px'
     },
     newNoteBtn: {
-      marginTop: "120%",
+      
       width: '91%',
       height: '35px',
     
@@ -35,8 +35,14 @@ const styles = theme => ({
       width: '300px',
       height: '100%',
       boxSizing: 'border-box',
-      
+     
       float: 'left',
+     
+    },
+    list:{
+      
+      width: '100%',
+      height:"80%",
       overflowY: 'scroll',
       overflowX: 'hidden'
     },

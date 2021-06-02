@@ -3,7 +3,7 @@
     width : 40%;
     height: 60%;
     position: absolute;
-    z-index: -1;
+    
     margin-left: 55%;
     animation-name: floating;
     animation-duration: 3s;
@@ -28,7 +28,9 @@
 }
 .hero-container{
     /* background: url('../src/images/img-home.jpg') center center/cover no-repeat; */
-    margin-top: 10px;
+    background: rgb(5,115,227);
+background: linear-gradient(148deg, rgba(5,115,227,1) 18%, rgba(79,163,249,1) 42%, rgba(235,242,250,1) 95%);
+
     height: 100vh;
     width: 100%;
     display: flex;
@@ -37,6 +39,7 @@
     align-items: center;
     /* box-shadow: inset 0 0 0 100px rgba(0,0,0,0.2); */
     object-fit: contain;
+   
 }
 
 .text > h1{
@@ -48,7 +51,7 @@
 
 .text > p {
     margin-top: 8px;
-    color: rgb(57, 84, 238);
+    color: rgb(255, 255, 255);
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    

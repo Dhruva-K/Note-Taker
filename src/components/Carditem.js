@@ -4,19 +4,17 @@ import { Link } from 'react-router-dom'
 function Carditem(props) {
     return (
         <>
-            <li className = "cards__item">
-                <Link className = "cards__item__link" to={props.path}>
-                    <figure className = "cards__item__pic-wrap" data-category={props.label}>
-                        <img src={props.src} alt="Travel Image"
-                        className='cards__item__img' />
-
-                    </figure>
+            <div className = "cards__item">
+               
+                 
                     <div className='cards__item__info'>
                         <h5 className='cards__item__text'>{props.text}</h5>
-            
                     </div>
-                </Link>
-            </li>
+                    <div className='cards_extra_info'>
+                        <p className = "cards__para">You can now summarize the text saved in your notes and make the content more readable</p>
+                    </div>
+              
+            </div>
         </>
     )
 }

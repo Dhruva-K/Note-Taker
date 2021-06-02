@@ -3,8 +3,10 @@ import Editor from '../../editor/Editor';
 import Sidebar from '../../sidebar/Sidebar';
 import './Notes.css';
 import firebase from 'firebase/app';
-
-
+import axios from 'axios';
+import { removeHTMLTags } from '../../helpers';
+import not from "../../images/Add notes-amico.svg";
+import debounce from '../../helpers';
 
  class Notes extends Component {
      constructor(props) {
@@ -13,8 +15,10 @@ import firebase from 'firebase/app';
          this.state = {
               selectedNoteIndex: null,
               selectedNote:null,
-              notes:null
+              notes:null,
+              
          };
+         this.child = React.createRef();
      }
      
     render() {
@@ -24,13 +28,18 @@ import firebase from 'firebase/app';
                 notes={this.state.notes}
                 deleteNote={this.deleteNote}
                 selectNote={this.selectNote}
-                newNote={this.newNote}></Sidebar>
+                newNote={this.newNote}
+                fileUpload = {this.fileUpload}
+                ></Sidebar>
                 {
                     this.state.selectedNote ?
-                <Editor selectedNote={this.state.selectedNote}
+                <Editor ref = {this.child}
+                selectedNote={this.state.selectedNote}
                 selectedNoteIndex={this.state.selectedNoteIndex}
                 notes={this.state.notes}
-                noteUpdate={this.noteUpdate}></Editor> :
+                noteUpdate={this.noteUpdate}
+                
+                ></Editor> :
                 null
                 }
                 
@@ -48,7 +57,7 @@ import firebase from 'firebase/app';
                     data['id'] = _doc.id;
                     return data;
                 });
-                console.log(notes)
+                // console.log(notes)
                 this.setState({notes:notes});
             });  //whenever something gets updated in notes collection in firebase, function pssed to onSnapshot gets called 
      
@@ -104,6 +113,29 @@ import firebase from 'firebase/app';
         .collection('notes')
         .doc(note.id)
         .delete();
+        
+    }
+    fileUpload = (note) =>{
+         console.log(note.body);
+         var params={
+             data: removeHTMLTags(note.body)
+         }
+         if(note.body !== ""){
+             axios.post("http://localhost:5000/",params).then(
+                 (response) =>{
+                      var result = response.data;
+                     console.log(result);
+                     this.child.current.updateBody(result)
+                 },
+                 (error) =>{
+                     console.log(error)
+                 }
+             )
+                
+         }
+         else{
+             alert("failed")
+         }
     }
 }
 
