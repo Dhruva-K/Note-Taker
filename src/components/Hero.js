@@ -12,8 +12,8 @@ function Hero() {
         <div className='hero-container'>
             <img src = {image} className="img-fluid-animated"/>
             <div className="text">
-            <h1>Note Taking App</h1>
-            <p>That one place to store your notes</p>
+            <h1>NotesPro</h1>
+            <p>Modernizing the way of taking notes</p>
             <div className = "hero-btns">
             
                 <Button 

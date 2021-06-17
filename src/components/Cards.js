@@ -15,7 +15,8 @@ function Cards() {
                 <div className = "img_contain">
                     <img src = {sum_} className="images"/>
                     </div>
-                    <Carditem text = "Hello"
+                    <Carditem text = "Making notes is easy!"
+                    para = "You can now easily create, store and edit your notes in NotesPro "
                     path = "/editor"
                    />
                 </div>
@@ -23,7 +24,8 @@ function Cards() {
                 <div className = "img_contain">
                     <img src = {voice_} className="images"/>
                     </div>
-                    <Carditem text = "Hello"
+                    <Carditem text = "Summarize your text!"
+                    para = "You can now summarize the text saved in your notes and make the content more readable"
                     path = "/editor"
                    />
                 </div>
@@ -31,7 +33,8 @@ function Cards() {
                     <div className = "img_contain">
                     <img src = {not} className="images"/>
                     </div>
-                    <Carditem text = "Hello"
+                    <Carditem text = "Dictate your notes!"
+                    para = "Bored of typing? Use our voice feature for dictating your notes now"
                     path = "/editor"
                    />
                 </div>

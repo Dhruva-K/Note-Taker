@@ -9,6 +9,7 @@ import Sidebar from '../sidebar/Sidebar';
 import { Button } from '@material-ui/core';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import Voice from './Voice';
+import Script from 'react-load-script'
 
  class Editor extends Component {
     constructor(props) {
@@ -40,6 +41,12 @@ import Voice from './Voice';
 
 
     componentDidMount = () => {
+        const script = document.createElement("script");
+
+    script.src = "https://togetherjs.com/togetherjs-min.js";
+    script.async = true;
+
+    document.body.appendChild(script);
         this.setState({
             text: this.props.selectedNote.body,
             title: this.props.selectedNote.title,
@@ -102,6 +109,8 @@ import Voice from './Voice';
                     
                     </input>
                     <Voice updateBody = {this.updateBody} id={this.state.id} >Voice</Voice>
+                   
+                   
                     </div>
                    
  

@@ -8,7 +8,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
+          Sign up for unlimited access and premium features
         </p>
         <p className='footer-subscription-text'>
           You can unsubscribe at any time.
@@ -64,8 +64,8 @@ function Footer() {
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              TRVL
-              <i class='fab fa-typo3' />
+              NotesPro
+              
             </Link>
           </div>
           

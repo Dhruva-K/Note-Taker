@@ -11,7 +11,7 @@ function Carditem(props) {
                         <h5 className='cards__item__text'>{props.text}</h5>
                     </div>
                     <div className='cards_extra_info'>
-                        <p className = "cards__para">You can now summarize the text saved in your notes and make the content more readable</p>
+                        <p className = "cards__para">{props.para}</p>
                     </div>
               
             </div>
